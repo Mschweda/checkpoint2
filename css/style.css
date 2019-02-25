@@ -1,46 +1,41 @@
  .img {
      background-image: url(https://images.unsplash.com/photo-1531850039645-b21522964b91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
      background-size: cover;
-     height: 1000px;
     }
-
+   
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
     width: 100%;
-    height: 1000px;
     }
 
-nav {
-    height: 100px;
-    grid-column: 1/4;
-    grid-row: 1;
+.nav {
     display: flex;
+    flex-direction: row;
     justify-content: center; 
+   
     padding: 20px; 
-    position: fixed;
     top: 0px;
     transition: .5s;
     }
 
-nav, ul, li {
+ ul, li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
     list-style-type: none;
-    display: inline-block;
     padding: 10px 20px;
     cursor: pointer;
+    margin-right: 70px;
     }
 
 .btn {
     margin-left: 200px; 
     align-items: center;
-    margin-top: 30px; 
     background-color: none;
     color: black;
     text-decoration: none; 
     padding: 10px;
     width: 200px;
-    font-size: 30px; 
+    font-size: 35px; 
     font-family: 'Francois One', sans-serif;
     }
 
@@ -55,34 +50,28 @@ header {
 
 .landingPage {
     display: flex;
-    justify-content: center;
-    width: 1440px;
-    height: 200px;
-    margin-top: 50px;
+    justify-content:center ;
     }
 
 h1 {
     display: flex;
     justify-content: center;
     font-size: 70px;
-    color: black;
-    margin-top: 300px;
+    color: white;
+    margin-top: 100px;
     letter-spacing: 10px; 
     font-family: 'Francois One', sans-serif;
     }
 
 section {
-    grid-column: 1/4;
-    grid-row: 3/4;
     height: 364px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 200px;
-    width: 100%;
     }
 
-  .tab {
+.tab {
     height: 50px;
     width: 260px;
     background-color: black;
@@ -91,7 +80,7 @@ section {
     border-radius: 5px;
     }
 
- .tab a {
+.tab a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,17 +91,24 @@ section {
     font-family: 'Francois One', sans-serif;
     }
 
+.boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
 .one {
-    background-color: lightgray!important; 
+    background-color: lightgray; 
     color: white;
     width: 300px;
     height: 300px;
-    margin-left: 25px;
     margin-top: 25px;
+    padding: 10px;
     }
 
 .one:hover {
-    background-color: #236ee7!important;
+    background-color: #236ee7;
     }
 
 .tab:hover {
@@ -126,6 +122,7 @@ section {
     width: 300px;
     height: 300px;
     margin-top: 25px;
+    padding: 10px;
     }
 
 .two:hover {
@@ -139,7 +136,7 @@ section {
     width: 300px;
     height: 300px;
     margin-top: 25px;
-    margin-right: 25px;
+    padding: 10px;
     }
 
 .three:hover {
@@ -150,3 +147,66 @@ p {
     text-align: center;
     margin-top: 10px;
     }
+
+
+@media (max-width: 1322px) {
+    .btn {
+        display: block;
+        margin: 0;
+        text-align: left;
+        color: white;
+        }
+       
+    ul, li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        }
+
+    .one, .two, .three {
+    width: 200px;
+    
+        }
+        
+    .tab {
+        width: 160px;
+    }
+    
+} 
+@media (max-width: 700px) {
+    .btn {
+        display: block;
+        margin: 0;
+        text-align: left;
+        color: white;
+        }
+       
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+    ul, li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        }
+
+    ul {
+        margin-top: 40px;
+        }
+
+    .img {
+        background-repeat: repeat;
+        }
+
+    h1 {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-left: 50px;
+        }
+    } 
